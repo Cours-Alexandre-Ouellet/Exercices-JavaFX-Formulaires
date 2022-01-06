@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.uqtr.exercice2.CreationMonstreController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <fx:define>
+        <ToggleGroup fx:id="groupeElement"></ToggleGroup>
+    </fx:define>
+
+    <Text textAlignment="CENTER">
+        Définition des familles
+    </Text>
+
+    <VBox alignment="TOP_LEFT">
+        <Label>Ajouter une famille</Label>
+        <TextField fx:id="nouvelleFamille"></TextField>
+        <Button onMouseClicked="#onAjoutFamille">Ajouter</Button>
+    </VBox>
+
+    <Separator></Separator>
+
+    <Text textAlignment="CENTER">
+        Ajout de nouveau monstre
+    </Text>
+
+    <VBox alignment="TOP_LEFT">
+        <Label>Nom du monstre</Label>
+        <TextField fx:id="nomMonstre"></TextField>
+
+        <Label>Vie du monstre</Label>
+        <TextField fx:id="vieMonstre"></TextField>
+
+        <Label>Difficulté</Label>
+        <ChoiceBox fx:id="niveauDifficulte" value="Choisissez une difficulté">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Ma grand-mère est plus forte que toi !"></String>
+                    <String fx:value="Quelques goutes de sueurs plus tard..."></String>
+                    <String fx:value="Je vais mourir !!!"></String>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Label>Élément du monstre</Label>
+        <RadioButton toggleGroup="$groupeElement" fx:id="elementAir">Air</RadioButton>
+        <RadioButton toggleGroup="$groupeElement" fx:id="elementEau">Eau</RadioButton>
+        <RadioButton toggleGroup="$groupeElement" fx:id="elementFeu">Feu</RadioButton>
+        <RadioButton toggleGroup="$groupeElement" fx:id="elementTerre">Terre</RadioButton>
+
+        <Label>Famille du monstre</Label>
+        <ChoiceBox fx:id="famille" value="Choisissez une famille"></ChoiceBox>
+
+        <HBox alignment="BOTTOM_RIGHT">
+            <Button onMouseClicked="#onAjoutMonstre">Ajouter</Button>
+        </HBox>
+
+    </VBox>
+
+    <Text fx:id="message"></Text>
+    <Text fx:id="nombreMonstres">Il y a 0 monstre de créé.</Text>
+
+</VBox>

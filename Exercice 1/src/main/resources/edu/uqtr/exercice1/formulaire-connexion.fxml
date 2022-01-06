@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.uqtr.exercice1.FormulaireConnexionController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Text textAlignment="CENTER">Connexion</Text>
+
+    <VBox alignment="TOP_LEFT">
+        <Label>Nom d'utilisateur</Label>
+        <TextField fx:id="nomUtilisateur"></TextField>
+
+        <Label>Mot de passe</Label>
+        <PasswordField fx:id="motDePasse"></PasswordField>
+
+        <HBox alignment="BOTTOM_RIGHT">
+            <Button onMouseClicked="#onConnecter">Se connecter</Button>
+            <Button onMouseClicked="#onReinitialiser">Réinitialiser</Button>
+        </HBox>
+
+        <!-- wrappingWidth permet de définir à quelle largeur est-ce que le texte renvoit automatiquement à la ligne -->
+        <Text fx:id="message" wrappingWidth="300"></Text>
+    </VBox>
+
+</VBox>

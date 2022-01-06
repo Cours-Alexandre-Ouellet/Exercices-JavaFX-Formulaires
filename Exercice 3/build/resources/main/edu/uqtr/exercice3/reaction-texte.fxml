@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.uqtr.exercice3.ReactionTexteController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label>Zone 1</Label>
+    <TextField fx:id="zone1" onKeyReleased="#onToucheRelachee"></TextField>
+
+    <Label>Zone 2</Label>
+    <TextField fx:id="zone2" onKeyReleased="#onToucheRelachee"></TextField>
+
+    <Text fx:id="message"></Text>
+</VBox>
