@@ -11,9 +11,10 @@
       alignment="TOP_LEFT">
 
     <Pane prefWidth="400" prefHeight="400"
-          fx:id="zone">
+          fx:id="zone" onMouseClicked="#onSourisClicZone" onMouseMoved="#onSourisDeplacerZone">
 
-        <Rectangle fx:id="carre" width="100" height="100" x="0" y="0"></Rectangle>
+        <Rectangle fx:id="carre" width="100" height="100" x="0" y="0" onMouseDragged="#onSourisGlisserZone"
+        onMouseEntered="#onSourisEntreeRectangle" onMouseExited="#onSourisSortieRectangle"></Rectangle>
 
     </Pane>
     <Separator></Separator>
